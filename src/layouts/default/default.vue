@@ -2,22 +2,9 @@
 <script lang="ts" src="./default.ts">
 </script>
 <template>
-  <div class="[ default ][ ]">
-    <!-- Header -->
-    <div class="[ ]">
-
-    </div>
-
-    <!-- Body -->
-    <div class="[ ]">
-      <transition name="fade">
-        <router-view />
-      </transition>
-    </div>
-
-    <!-- Footer -->
-    <div class="[ ]">
-      
-    </div>
+  <div class="content-wrapper">
+    <layout-header />
+    <layout-body />
+    <layout-footer />
   </div>
 </template>

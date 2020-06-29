@@ -1,0 +1,115 @@
+@import '../../../theme/color';
+@import '../../../theme/font';
+
+header {
+    max-width: 1130px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+    font-family: $font-family;
+    height: 225px;
+    word-spacing: .3em;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    &.slimmenu {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background: $primary;
+      height: 0px;
+      &:before, &:after {
+        content: '';
+        display: table;
+      }
+      >li:first-child, >li.has-submenu+li {
+        border-left: 0;
+      }
+      li {
+        position: relative;
+        display: inline-block;
+        a {
+          display: block;
+          padding: 44px 10px 8px 10px;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  
+    &#menu li:first-child {
+      margin-left: 220px;
+    }
+  }
+  
+  #menu {
+    color: $primary;
+    position: relative;
+    z-index: 60;
+    font-family: $font-family;
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+    word-spacing: .3em;
+    text-transform: uppercase;
+  
+    a {
+      color: $primary;
+      text-decoration: none;
+      &:hover {
+          transition: background-color .4s;
+          background-color: $tertiary;
+      }
+    }
+  }
+
+  #layout-topbar1 {
+    height: 84px;
+    background: $accent;
+    width: 100%;
+    float: left;
+  }
+
+  #layout-topbar2 {
+    height: 78px;
+    background: $primary;
+    width: 100%;
+    float: left;
+  }
+
+  #logo {
+    width: 200px;
+    height: 200px;
+    left: 5px;
+    background: url("../../../assets/logo.png");
+    position: absolute;
+    background-size: 200px 200px;
+    top: 8px;
+  }
+
+  #logo-text {
+    font-family: $font-family;
+    font-weight: 900;
+    font-size: 68px;
+    text-transform: uppercase;
+    color: $white;
+    position: absolute;
+    top: 75px;
+    left: 220px;
+  }
+
+  #logo-subtext {
+    font-family: $font-family;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: $primary;
+    position: absolute;
+    top: 165px;
+    left: 220px;
+  }
+  

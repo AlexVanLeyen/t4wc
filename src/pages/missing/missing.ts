@@ -1,15 +1,10 @@
 import { Component, Vue } from 'vue-property-decorator';
-import { Dictionary } from 'vue-router/types/router';
 
 @Component({
-  components: {
-    layoutHeader: () => import('@/components/layout/layout-header'),
-    layoutBody: () => import('@/components/layout/layout-body'),
-    layoutFooter: () => import('@/components/layout/layout-footer'),
-  },
-  name: 'default',
+  components: {},
+  name: 'missing',
 })
-class Default extends Vue {
+class Missing extends Vue {
   // --------------------------------------------------------------------------
   // [Private] Fields
   // --------------------------------------------------------------------------
@@ -30,10 +25,6 @@ class Default extends Vue {
   // [Public] Methods
   // --------------------------------------------------------------------------
 
-  public async navigate(path: string, params?: Dictionary<string>) {
-    await this.$router.push({ path, params });
-  }
-
   // --------------------------------------------------------------------------
   // [Private] Event Handlers
   // --------------------------------------------------------------------------
@@ -53,6 +44,6 @@ class Default extends Vue {
 }
 
 export {
-  Default as default,
-  Default,
+  Missing as default,
+  Missing,
 };

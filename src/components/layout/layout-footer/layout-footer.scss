@@ -1,0 +1,24 @@
+@import '../../../theme/color';
+@import '../../../theme/font';
+
+.v-footer {
+    position: absolute;
+    height: 100px;
+    justify-content: center;
+    word-spacing: .3em;
+}
+
+.theme--light.v-footer {
+    background-color: $primary;
+    font-family: $font-family;
+}
+
+#copyright {
+    text-align: center;
+    color: $white;
+    margin-top: 3px;
+    a {
+        color: $secondary;
+        text-decoration: none;
+    }
+}

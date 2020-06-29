@@ -1,10 +1,11 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
-  components: {},
-  name: 'hello-world',
+  components: {
+  },
+  name: 'layout-header',
 })
-class HelloWorldView extends Vue {
+class LayoutHeader extends Vue {
   // --------------------------------------------------------------------------
   // [Private] Fields
   // --------------------------------------------------------------------------
@@ -39,10 +40,11 @@ class HelloWorldView extends Vue {
 
   private mounted() {
     // TODO: stuff to do when this component loads.
+
   }
 }
 
 export {
-    HelloWorldView as default,
-    HelloWorldView,
+  LayoutHeader as default,
+  LayoutHeader,
 };

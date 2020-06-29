@@ -1,15 +1,10 @@
 import { Component, Vue } from 'vue-property-decorator';
-import { Dictionary } from 'vue-router/types/router';
 
 @Component({
-  components: {
-    layoutHeader: () => import('@/components/layout/layout-header'),
-    layoutBody: () => import('@/components/layout/layout-body'),
-    layoutFooter: () => import('@/components/layout/layout-footer'),
-  },
-  name: 'default',
+  components: {},
+  name: 'view-comic',
 })
-class Default extends Vue {
+class ViewComic extends Vue {
   // --------------------------------------------------------------------------
   // [Private] Fields
   // --------------------------------------------------------------------------
@@ -26,13 +21,22 @@ class Default extends Vue {
   // [Public] Accessors
   // --------------------------------------------------------------------------
 
+  public get page(): number {
+    return parseInt(this.$route.params.page, 10) || 1;
+  }
+
+
+  public get previousPage() {
+    return (this.page > 1) ? this.page - 1 : 1;
+  }
+
+  public get nextPage() {
+    return this.page + 1;
+  }
+
   // --------------------------------------------------------------------------
   // [Public] Methods
   // --------------------------------------------------------------------------
-
-  public async navigate(path: string, params?: Dictionary<string>) {
-    await this.$router.push({ path, params });
-  }
 
   // --------------------------------------------------------------------------
   // [Private] Event Handlers
@@ -53,6 +57,6 @@ class Default extends Vue {
 }
 
 export {
-  Default as default,
-  Default,
+  ViewComic as default,
+  ViewComic,
 };
